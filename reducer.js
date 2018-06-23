@@ -10,19 +10,19 @@ const ADD_SECOND = "ADD_SECOND";
 
 function startTimer() {
   return {
-    types: START_TIMER
+    type: START_TIMER
   };
 }
 
 function restartTimer() {
   return {
-    types: RESTART_TIMER
+    type: RESTART_TIMER
   };
 }
 
 function addSecond() {
   return {
-    types: ADD_SECOND
+    type: ADD_SECOND
   };
 }
 
@@ -44,6 +44,8 @@ function reducer(state = initialState, action) {
       return applyRestartTimer(state);
     case ADD_SECOND:
       return applyAddSecond(state);
+    default:
+      return state;
   }
 }
 
@@ -85,6 +87,8 @@ const actionCreators = {
   restartTimer, 
   addSecond
 }
+
+export { actionCreators };
 
 // Export Reducer
 
