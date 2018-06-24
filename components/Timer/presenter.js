@@ -5,13 +5,10 @@ import Button from "../Button";
 function formatTime(time) {
   var minutes = Math.floor(time / 60);
   time -= minutes * 60;
-
   var seconds = parseInt(time % 60, 10);
-
   return `${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10
     ? `0${seconds}`
     : seconds}`;
-
   return;
 }
 
@@ -77,7 +74,7 @@ const styles = StyleSheet.create({
   },
   time: {
     color: "white",
-    fontSize: 120,
+    fontSize: 100,
     fontWeight: "100"
   }
 });
